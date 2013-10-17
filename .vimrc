@@ -113,3 +113,6 @@ map <f12> :TrinityToggleAll<CR>
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+"Python
+let python_highlight_all=1
