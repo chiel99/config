@@ -1,0 +1,36 @@
+1. Install useful packages:
+sudo apt-get install ssh vim screen ctags wireshark filezilla gimp git \
+p7zip-full texinfo cscope exuberant-ctags ia32-libs geany vlc gitk \
+minicom cutecom
+
+2. Install android build requirements:
+sudo apt-get install git gnupg flex bison gperf build-essential \
+zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+libgl1-mesa-dev g++-multilib mingw32 tofrodos \
+python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+
+3. Install chrome
+
+4. Install skype
+- Fix tray missing: sudo apt-get install sni-qt sni-qt:i386
+
+5. Install Java JDK
+- Download jdk-6u45-linux-x64.bin from Oracle's website
+- chmod a+x jdk-6u45-linux-x64.bin
+- ./jdk-6u45-linux-x64.bin
+- mv jdk1.6.0_45 java-6-oracle
+- sudo mkdir /usr/lib/jvm
+- sudo mv java-6-oracle /usr/lib/jvm
+
+- wget http://webupd8.googlecode.com/files/update-java-0.5b
+- chmod +x update-java-0.5b
+- sudo ./update-java-0.5b
+
+- java -version  => java version "1.6.0_45"
+- javac -version => javac 1.6.0_45
+
+6. Input Method
+- sudo apt-get install ibus-chewing
+- im-switch -s ibus
+- logout, login
