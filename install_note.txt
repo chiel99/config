@@ -1,7 +1,7 @@
 1. Install useful packages:
 sudo apt-get install ssh vim screen ctags wireshark filezilla gimp git \
 p7zip-full texinfo cscope exuberant-ctags ia32-libs geany vlc gitk \
-minicom cutecom unrar
+minicom cutecom unrar mercurial
 
 2. Install android build requirements:
 sudo apt-get install git gnupg flex bison gperf build-essential \
