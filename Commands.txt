@@ -1,0 +1,3 @@
+# cp --parents can create the path
+diff -ur ./ xxx/ | grep -v git | grep diff | awk '{print $3}' | xargs -i cp --parents {} ooo/
+
