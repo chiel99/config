@@ -30,6 +30,9 @@ python-markdown libxml2-utils xsltproc zlib1g-dev:i386
 - java -version  => java version "1.6.0_45"
 - javac -version => javac 1.6.0_45
 
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/java-6-oracle/bin/java" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/java-6-oracle/bin/javac" 1
+
 6. Input Method
 - sudo apt-get install ibus-chewing
 - im-switch -s ibus
