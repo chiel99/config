@@ -1,3 +1,11 @@
 # cp --parents can create the path
 diff -ur ./ xxx/ | grep -v git | grep diff | awk '{print $3}' | xargs -i cp --parents {} ooo/
 
+# Change ext4 image size
+resize2fs userdata.img 1024M
+tune2fs -e continue userdata.img
+
+# Add java jdk in system list
+update-alternatives --install /usr/bin/java java /usr/lib/jvm/xxx/bin/java 300
+update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/xxx/bin/javac 300
+update-alternatives --install /usr/bin/javadoc javadoc /usr/lib/jvm/xxx/bin/javadoc 300
