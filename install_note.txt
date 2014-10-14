@@ -37,3 +37,6 @@ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/java-6
 - sudo apt-get install ibus-chewing
 - im-switch -s ibus
 - logout, login
+
+7. ADB/FASTBOOT permission 
+- /etc/udev/rules.d/51-android.rules
