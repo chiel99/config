@@ -3,6 +3,7 @@
     ci=commit
     st=status
     br=branch
+    tree=log --graph --decorate --pretty=oneline --abbrev-commit
 
 [color]
     ui=true
