@@ -9,3 +9,6 @@ tune2fs -e continue userdata.img
 update-alternatives --install /usr/bin/java java /usr/lib/jvm/xxx/bin/java 300
 update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/xxx/bin/javac 300
 update-alternatives --install /usr/bin/javadoc javadoc /usr/lib/jvm/xxx/bin/javadoc 300
+
+# Change file name to lowercase
+for i in $(find . -type f -name "*[A-Z]*"); do mv "$i" "$(echo $i | tr A-Z a-z)"; done
