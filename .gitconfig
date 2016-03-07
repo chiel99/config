@@ -17,3 +17,6 @@
 
 [commit]
     template=/home/richard/.gittemplate
+
+[push]
+    default = simple

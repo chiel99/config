@@ -99,6 +99,8 @@ termcapinfo linux C8
 # old rxvt versions also need this
 # termcapinfo rxvt C8
 
+# Support 256 colors
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 ################
 #
