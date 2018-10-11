@@ -112,7 +112,7 @@ Bundle 'IndexedSearch'
 "" Java autocompletion
 Bundle 'javacomplete'
 "" XML autocompletion
-Bundle 'xml.vim'
+"Bundle 'xml.vim'
 Bundle 'Trinity'
 Bundle 'taglist.vim'
 Bundle 'SrcExpl'
@@ -125,6 +125,16 @@ Bundle 'SrcExpl'
 " " Yank history navigation
 " Bundle 'YankRing.vim'
 "
+Bundle 'Valloric/YouCompleteMe'
+"Bundle 'rdnetto/YCM-Generator'
+Bundle 'Yggdroot/indentLine'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'vim-airline/vim-airline'
+Bundle 'tpope/vim-fugitive'
+
+" MarkDown
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 " "
 " ============================================================================
 " " Install plugins the first time vim runs
@@ -237,3 +247,19 @@ let python_highlight_all=1
 
 "Configure for 256 color
 set t_Co=256
+
+augroup filetype
+    au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
+"YouCompleteMe
+let g:ycm_confirm_extra_conf=0
+let g:ycm_collect_identifiers_from_tag_files=1
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+set laststatus=2
+
+"let g:vim_markdown_no_default_key_mappings = 1
+"let g:vim_markdown_toc_autofit = 1
+"let g:vim_markdown_folding_disabled = 1

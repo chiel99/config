@@ -14,9 +14,19 @@
 
 [core]
     editor=vim
+    autocrlf = input
 
 [commit]
     template=/home/richard/.gittemplate
 
 [push]
     default = simple
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[fetch]
+    prune = true
