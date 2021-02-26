@@ -100,7 +100,7 @@ termcapinfo linux C8
 # termcapinfo rxvt C8
 
 # Support 256 colors
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 ################
 #
@@ -108,19 +108,19 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 #
 
 #remove some stupid / dangerous key bindings
-bind k
-bind ^k
-bind .
-bind ^\
-bind \\
-bind ^h
-bind h
-#make them better
-bind 'K' kill
-bind 'I' login on
-bind 'O' login off
-bind '}' history
-
+#bind k
+#bind ^k
+#bind .
+#bind ^\
+#bind \\
+#bind ^h
+#bind h
+##make them better
+#bind 'K' kill
+#bind 'I' login on
+#bind 'O' login off
+#bind '}' history
+#
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
 # This lets me have autoindent mode in vi.
