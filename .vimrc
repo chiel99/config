@@ -116,6 +116,8 @@ Bundle 'javacomplete'
 Bundle 'Trinity'
 Bundle 'taglist.vim'
 Bundle 'SrcExpl'
+Bundle 'fatih/vim-go'
+"Bundle 'Valloric/YouCompleteMe'
 "" Android autocompletion
 "Bundle 'hsanson/vim-android'
 " XML/HTML tags navigation
@@ -124,13 +126,13 @@ Bundle 'SrcExpl'
 " Bundle 'Wombat'
 " " Yank history navigation
 " Bundle 'YankRing.vim'
-"
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'chazy/cscope_maps'
+"Bundle 'Valloric/YouCompleteMe'
 "Bundle 'rdnetto/YCM-Generator'
 Bundle 'Yggdroot/indentLine'
 Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'vim-airline/vim-airline'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'vim-airline/vim-airline'
+"Bundle 'tpope/vim-fugitive'
 
 " MarkDown
 "Plugin 'godlygeek/tabular'
@@ -158,7 +160,7 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-set ts=8		" tabstop = 4
+set ts=4		" tabstop = 4
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -215,13 +217,12 @@ if $TERM == "xterm"
 	set term=xterm-color
 endif
 
-" highlight Comment ctermfg=darkcyan
-highlight Search term=reverse ctermbg=4 ctermfg=7
+"highlight Comment ctermfg=darkcyan
+"highlight Search term=reverse ctermbg=4 ctermfg=0
 " key binding
 map  0
 map  $
 
-" ¦Û­q~
 set background=dark
 set nu
 "Ignore case when searching
@@ -248,15 +249,26 @@ let python_highlight_all=1
 "Configure for 256 color
 set t_Co=256
 
+colorscheme wombat256
+
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=19 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=19 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=19 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+
+set listchars=tab:»\ 
+set list
+set cursorline
+
 augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
 
 "YouCompleteMe
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tag_files=1
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_confirm_extra_conf=0
+"let g:ycm_collect_identifiers_from_tag_files=1
+"let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 set laststatus=2
 
