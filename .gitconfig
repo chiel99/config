@@ -4,29 +4,33 @@
     st=status
     br=branch
     tree=log --graph --decorate --pretty=oneline --abbrev-commit
+    cp=cherry-pick
 
 [color]
     ui=true
 
 [user]
-    name=chiel99
+    name=Richard Chang
     email=chiel99@gmail.com
 
 [core]
-    editor=vim
-    autocrlf = input
+    editor=mvim -v
+    #editor=vim
+    #autocrlf = input
 
 [commit]
-    template=/home/richard/.gittemplate
-
+#    template=~/.gittemplate
 [push]
     default = simple
 
-[diff]
-    tool = vimdiff
-
-[difftool]
-    prompt = false
+#[diff]
+#    tool = vimdiff
+#
+#[difftool]
+#    prompt = false
 
 [fetch]
     prune = true
+
+[diff]
+    noprefix = true
