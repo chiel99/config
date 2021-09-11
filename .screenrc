@@ -155,3 +155,6 @@ hardstatus alwayslastline "%{wb}%-Lw%50L>%{rk} %n*%f %t %{wb}%+Lw%75< %{WB}%= %c
 # defnonblock 1
 # blankerprg rain -d 100
 # idle 30 blanker
+
+# Support scroll up as terminal
+termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
